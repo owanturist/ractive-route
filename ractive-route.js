@@ -288,7 +288,7 @@
 	
 		// 404
 		if (!route) {
-			return this.redirect(request);
+			route = this.match('*');
 		}
 	
 		if (options.reload || shouldDispatch(this.uri, uri, route)) {
